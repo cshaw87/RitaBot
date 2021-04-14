@@ -508,6 +508,20 @@ const checkPerms = function(data, sendBox)
             icon_url: data.bot.displayAvatarURL
          }
       };
+      var sendDataOk = {
+         title: data.title,
+         fields: data.fields,
+         config: data.config,
+         channel: data.message.channel,
+         color: data.color,
+         text: data.text,
+         footer: data.footer,
+         embeds: data.message.embeds,
+         attachments: data.message.attachments,
+         forward: data.forward,
+         origin: null,
+         bot: data.bot
+      };   
    }
 
    // ---------------------------------------------------
@@ -608,5 +622,5 @@ const checkPerms = function(data, sendBox)
    // Send message
    // -------------
 
-   return sendBox(sendData);
+   return sendBox(sendDataOk);
 };

@@ -585,7 +585,7 @@ const checkPerms = function(data, sendBox)
             // Send message
             // -------------
 
-            return sendBox(sendData);
+            return sendBox(sendDataOk);
          }
       }
 
